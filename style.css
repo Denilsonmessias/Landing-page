@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Chakra+Petch:wght@300;400&family=Luckiest+Guy&family=Orbitron:wght@900&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Luckiest+Guy&family=Orbitron:wght@700;800&family=Patua+One&family=Permanent+Marker&family=Rampart+One&family=Roboto:wght@500&family=Silkscreen&display=swap');
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* CABEÇALHO */
+.container {
+    background-color: #4e2463;
+    font-family: Roboto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 50px;
+    height: 50px;
+}
+.logo {
+    color: rgb(0, 189, 85);
+    font-size: 8px;
+    font-family: Silkscreen;
+    letter-spacing: -2px;
+    text-shadow: 2px 2px 4px black;
+    cursor: pointer;
+    text-align: center;
+}
+.menu{
+    padding-left: 100px;
+    font-size: 14px;
+    display: flex;
+    gap: 35px;
+    color: #fff;
+    cursor:pointer;
+}
+.menu a:hover {
+    color: rgb(0, 189, 85);
+    transition: transform 0.35s;
+    transform: scale(1.15);
+}
+.search-box {
+    background: transparent;
+}
+.search-btn {
+    color: rgb(0, 189, 85);
+    float: right;
+    width: 20px;
+    height: 20px;
+    padding-left: 7px;
+    transition: 1s;
+    cursor:pointer;
+}
+.search-txt {
+    border: none;
+    outline: none;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.651);
+    font-size: 12px;
+    transition: 0.9s;
+    width: 0px;
+    height: 25px;
+    background-color:#201b2c;
+}
+.search-box:hover > .search-txt{
+    width: 150px;
+    padding: 0 6px;
+}
+.search-box:hover > .search-btn{
+    background: transparent;
+}
+
+/* CONTEÚDO PRINCIPAL */
+.main {
+    background-color: #201b2c;
+    display: flex;
+    font-family: Orbitron;
+}
+.left {
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image {
+    width: 35vw;
+}
+.right {
+    width: 40vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.right > h2 {
+    color: #fff;
+    font-size: 3vw;
+    text-shadow: 2px 2px 4px black;
+    margin-bottom: 2px;
+}
+.right > h3 {
+    margin-top: 2px;
+    color:rgb(0, 189, 85);
+    font-size: 2vw;
+    text-shadow: 2px 2px 4px black;
+}
+.right > p {
+    color: #fff;
+    margin-bottom: 45px;
+    line-height: 25px;
+    font-family: Chakra Petch;
+    text-align: justify;
+    padding-right: 155px;
+}
+.card {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px;
+    background-color: #4e2463;
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px black;
+}
+.card > input::placeholder {
+    font-family: Chakra Petch;
+    font-size: 18px;
+}
+#name {
+    width: 100%;
+    border-radius: 15px;
+    padding: 8px 15px;
+    outline: none;
+    font-size: 13px;
+    border: 2px solid rgb(0, 189, 85);
+    box-shadow: 2px 2px 5px #000;
+    transition: transform 0.3s;
+    box-sizing: border-box;
+}
+#name:hover {
+    transform: scale(1.05);
+}
+#mail {
+    width: 100%;
+    border-radius: 15px;
+    padding: 8px 15px;
+    outline: none;
+    font-size: 13px;
+    border: 2px solid rgb(0, 189, 85);
+    box-shadow: 2px 2px 5px #000;
+    transition: transform 0.3s;
+    box-sizing: border-box;
+}
+#mail:hover {
+    transform: scale(1.05);
+}
+#but {
+    width: 60%;
+    border-radius: 15px;
+    padding: 8px 15px;
+    outline: none;
+    font-size: 17px;
+    box-shadow: 2px 2px 5px #000;
+    transition: transform 0.3s;
+    background-color: rgb(0, 189, 85);
+    cursor: pointer;
+    font-family: Chakra Petch;
+}
+#but:hover {
+    transform: scale(1.09);
+}
+
+/* Responsividade de alguns elementos para resolução menor que 950px */
+@media only screen and (max-width: 950px){
+    .container {
+        flex-direction: column;
+        height: 150px;
+        padding: 10px;
+        }
+    .menu {
+        padding-left: 0;
+        font-size: 2vw; 
+        padding-bottom: 15px; }
+   .logo {
+        font-size: 10px;
+   }
+    .search-box {
+        font-size: 2vw;}
+    .search-txt {
+        height: 17px; }
+    .search-box:hover > .search-txt {
+        width: 80px; }
+    .main {
+        flex-direction: column;
+        align-items: center; }
+    .card{
+        width: 50%;
+        height: auto;
+        margin-bottom: 100px; }
+    .left {
+        width: 100%;
+        height: auto; }
+    .right {
+        width: 100%;
+        height: auto;
+        align-items: center; }
+    .right > h2{
+        font-size: 5vw; }
+    .right > h3{
+        font-size: 3vw; }
+    .right > p {
+       padding-left: 50px;
+       padding-right: 50px; }
+}
+
+/* Responsividade de alguns elementos para resolução dmenor que 600px */
+@media only screen and (max-width: 650px){
+    .container {
+        height: 140px;
+        padding: 2px; }
+        .search-txt {
+        height: 15px;
+        font-size: 10px; }
+}
